@@ -40,7 +40,7 @@
         <section>
             <h3>Template</h3>
             <p>
-                A <em>template</em> is a pre-designed layout or structure that can be used as a starting point for creating new content.
+                A <em>template</em> element is a layout that holds HTML content.
             </p>
             <template id="paragraph-template">
                 <h4>Template Title</h4>
@@ -50,45 +50,32 @@
 
         <section>
             <h3>audio</h3>
-            <p>The <em>audio</em> element is used to embed sound content in the document.</p>
+            <p>The <em>audio</em> element is used to inject sound into the website.</p>
             <audio controls>
                 <source src="audio/sample-audio.mp3" type="audio/mpeg">
-                Your browser does not support the audio element.
             </audio>
         </section>
 
         <section>
             <h3>video</h3>
-            <p>The <em>video</em> element is used to embed video content in the document.</p>
+            <p>The <em>video</em> element is used to embed videos into the website.</p>
             <video controls width="320" height="240">
                 <source src="video/sample-video.mp4" type="video/mp4">
-                Your browser does not support the video element.
             </video>
         </section>
 
         <section>
             <h3>canvas</h3>
-            <p>The <em>canvas</em> element is used to draw graphics on the fly via scripting (usually JavaScript).</p>
+            <p>The <em>canvas</em> element is used to create graphics.</p>
             <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
-                Your browser does not support the canvas element.
             </canvas>
-        </section>
-
-        <section>
-            <h3>source</h3>
-            <p>The <em>source</em> element is used to specify multiple media resources for media elements like <code>audio</code> and <code>video</code>.</p>
-            <video controls width="320" height="240">
-                <source src="video/sample-video.mp4" type="video/mp4">
-                <source src="video/sample-video.ogg" type="video/ogg">
-                Your browser does not support the video element.
-            </video>
         </section>
 
         <section>
             <h3>svg</h3>
             <div>
                 <p>
-                    The <em>svg</em> element is used to define vector-based graphics for the Web. SVG stands for Scalable Vector Graphics.
+                    The <em>svg</em> element is used for displaying 2D graphics on websites.
                 </p>
                 <svg width="100" height="100">
                     <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
@@ -99,14 +86,13 @@
         <section>
             <h3>iframe</h3>
             <p>The <em>iframe</em> element is used to embed another HTML page within the current page.</p>
-            <iframe src="embedded-page.html" width="320" height="240"></iframe>
+            <iframe src="about.html" width="320" height="240"></iframe>
         </section>
 
         <section>
             <h3>Custom Element</h3>
             <p> 
-                The element below prints a message to the browser console and changes nothing
-                on the page. To see it, open DevTools (<span>F12</span>) and check the Console tab.
+                The custom element prints a message to the browser console.
             </p>
             <ol>
                 <li>Open DevTools (<span>F12</span>)</li>
@@ -126,7 +112,7 @@
         const canvas = document.getElementById('myCanvas');
         const ctx = canvas.getContext('2d');
         ctx.strokeStyle ="black";
-        ctx.strokeRect(10, 10, 90,40);
+        ctx.strokeRect(10, 10, 90, 40);
         ctx.beginPath();
         ctx.arc(50, 50, 30, 0, 2 * Math.PI);
         ctx.stroke();
@@ -135,7 +121,7 @@
     <script>
         class HelloWorld extends HTMLElement {
             connectedCallback() {
-                console.log('Hello, World!');
+                console.log('Hello World!');
             }
         }
 
